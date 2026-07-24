@@ -27,7 +27,7 @@ public class Doctor {
 	private String specialization;
 	@Column(name = "dsalary",nullable=false)
 		private Double salary;
-	@Column(name="dname", length=100, nullable=false, unique=true)
+	@Column(name="demail", length=100, nullable=false, unique=true)
 	private String email;
 	@Column(length=20,nullable=false,unique=true)
 	private String contact;
