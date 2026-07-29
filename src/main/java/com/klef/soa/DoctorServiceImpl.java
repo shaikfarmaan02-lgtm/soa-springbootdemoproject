@@ -31,7 +31,7 @@ public class DoctorServiceImpl implements DoctorService
 			
 			doctor.setName(d.getName());
 			doctor.setSalary(d.getSalary());
-			doctor.setExpereince(d.getExpereince());
+			doctor.setExperience(d.getExperience());
 			doctor.setContact(d.getContact());
 			
 			return repo.save(doctor);
@@ -68,6 +68,10 @@ public class DoctorServiceImpl implements DoctorService
 	@Override
 	public List<Doctor> displayDoctorByGender(String gender) {
 		return repo.findByGender(gender);
+	}
+	@Override
+	public Long doctorCount() {
+		return repo.count();
 	}
 	
 
